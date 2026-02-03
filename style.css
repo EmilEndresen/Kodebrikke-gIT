@@ -43,6 +43,7 @@
         margin-left: 60px;
         margin-block: auto;
         border-radius: 10px;
+        font-family: 'Digital Numbers', sans-serif;
 
     }
 
@@ -52,4 +53,5 @@
         font-size: 1.8rem;
         text-align: center;
         margin: 5px;
+
     }
