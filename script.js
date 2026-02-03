@@ -7,7 +7,7 @@ function genererKode() {
    document.getElementById("kode").innerText = activeCode
 
    document.getElementById("codeInput").value = ""
-   document.getElementById("melding").innerText = ""
+   document.getElementById("message").innerText = ""
 
    document.getElementById("codeInput").focus()
 
@@ -16,8 +16,8 @@ function genererKode() {
    timeoutId = setTimeout(() => {
       activeCode = ""
       document.getElementById("kode").innerText = ""
-      document.getElementById("melding").innerText = "⏳ Koden utløp!"
-      document.getElementById("melding").style.color = "orange"
+      document.getElementById("message").innerText = "Koden utløp!"
+      document.getElementById("message").style.color = "orange"
    }, 45000)
 }
 
@@ -26,11 +26,11 @@ function sjekkKode() {
 
    if (input.length === 6) {
       if (input === activeCode && activeCode !== "") {
-         document.getElementById("melding").innerText = "✅ Riktig kode!"
-         document.getElementById("melding").style.color = "green"
+         document.getElementById("message").innerText = "Riktig kode!"
+         document.getElementById("message").style.color = "green"
       } else {
-         document.getElementById("melding").innerText = "❌ Feil kode!"
-         document.getElementById("melding").style.color = "red"
+         document.getElementById("message").innerText = "Feil kode!"
+         document.getElementById("message").style.color = "red"
       }
    }
 }
